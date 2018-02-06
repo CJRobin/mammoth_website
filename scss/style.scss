@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Concert+One|Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Acme|Work+Sans');
 
 //colors
 $orange: #edc195;
@@ -9,8 +9,31 @@ $gray: #39484c;
 $black: #232c33;
 
 //fonts
-$heading: 'Concert One', cursive;
+$heading: 'Acme', sans-serif;
 $paragraph: 'Work Sans', sans-serif;
+
+//responsive
+@mixin tablet {
+  @media (min-width: 792px) and (max-width: 1320px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 792) {
+    @content;
+  }
+}
+
+@mixin noselect{
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
 
 body{
   font-family: $heading;
@@ -25,17 +48,29 @@ body{
   width:100%;
   height:50px;
   position: fixed;
+  @include tablet{
+    height:100px;
+  }
   .title-section{
     float:left;
     font-size:21px;
     color: $white;
     margin-left: 24px;
     margin-top:10px;
+    @include tablet{
+      display: none;
+    }
   }
   .link-section{
     float:right;
     margin-right:24px;
     margin-top:12px;
+    @include tablet{
+      margin-top: 30px;
+      text-align: center;
+      margin-right: 0px;
+      float: none;
+    }
     a{
       color: $white;
       margin:12px;
@@ -46,6 +81,10 @@ body{
       border-bottom: 2px solid rgba($white, 0);
       &:hover{
         border-bottom: 2px solid $white;
+      }
+      @include noselect;
+      @include tablet{
+        font-size: 28px;
       }
     }
   }
@@ -65,6 +104,15 @@ body{
     height:800px;
     width:1200px;
     margin: auto;
+    @include tablet{
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      background-position: center;
+    }
+  }
+  @include tablet{
+    height: 800px !important;
   }
 }
 
@@ -99,6 +147,9 @@ body{
   .section-table{
     width: 50%;
     margin: auto;
+    @include tablet{
+      width: 75%;
+    }
     .table-row{
       float:left;
       .table-title{
@@ -125,6 +176,9 @@ body{
       float: left;
       margin: 12px;
       width: calc(25% - 24px);
+      @include tablet{
+        width: calc(50% - 24px);
+      }
     }
     .member-image{
       width: 150px;
@@ -190,10 +244,16 @@ body{
   .contact-section{
     width: 50%;
     margin: auto;
+    @include tablet{
+      width: 75%;
+    }
     p{
       margin: 6px auto;
       width: 100%;
       font-size: 26px;
+      @include tablet{
+        font-size: 32px;
+      }
     }
     input[type=text], textarea {
       background: #fff;
@@ -224,12 +284,20 @@ body{
       font-size: 21px;
       width: calc(50% - 28px);
       margin-right: 50%;
+      @include tablet{
+        font-size: 52px;
+        width: calc(100% - 28px);
+        margin-right: 0;
+      }
     }
     textarea{
       width: calc(100% - 28px);
       height:200px;
       font-size:14px;
       resize: none;
+      @include tablet{
+        font-size: 28px;
+      }
     }
     input[type=button]{
       border: none;
