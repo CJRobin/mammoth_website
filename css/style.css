@@ -119,7 +119,8 @@ body {
       .section .section-table {
         width: 75%; } }
     .section .section-table .table-row {
-      float: left; }
+      float: left;
+      clear: both; }
       .section .section-table .table-row .table-title {
         color: #edc195;
         font-size: 32px;
@@ -129,7 +130,11 @@ body {
         float: left;
         margin: 12px;
         color: #232c33;
-        font-family: "Work Sans", sans-serif; }
+        font-family: "Work Sans", sans-serif;
+        clear: both; }
+        .section .section-table .table-row .table-info ul {
+          margin: 0;
+          font-size: 18px; }
   .section .team-section {
     width: 70%;
     margin: 12px auto;

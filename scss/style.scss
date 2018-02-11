@@ -154,6 +154,7 @@ body{
     }
     .table-row{
       float:left;
+      clear: both;
       .table-title{
         color: $orange;
         font-size: 32px;
@@ -165,6 +166,11 @@ body{
         margin: 12px;
         color: $black;
         font-family: $paragraph;
+        clear: both;
+        ul{
+          margin: 0;
+          font-size: 18px;
+        }
       }
     }
   }

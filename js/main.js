@@ -10,6 +10,9 @@ $(function() {
       $(".port-display").css("background-image", "url(images/clients/heliweb/port.png)");
       $(".port-display a").attr("href", "http://www.heliweb.com/");
 
+    }else if($(this).attr('id') === 'them'){
+      $(".port-display").css("background-image", "url(images/clients/themuniversity/port.png)");
+      $(".port-display a").attr("href", "https://themmagazines.com/");
 
     }else if($(this).attr('id') === 'roblox'){
       $(".port-display").css("background-image", "url(images/clients/roblox/coco.png)");
