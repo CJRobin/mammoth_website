@@ -99,6 +99,9 @@ body {
     text-align: center;
     margin: auto;
     margin-top: 24px; }
+    @media (min-width: 792px) and (max-width: 1320px) {
+      .section .section-title {
+        font-size: 72px; } }
   .section .client-section {
     width: 50%;
     height: 200px;
@@ -126,6 +129,9 @@ body {
         font-size: 32px;
         float: left;
         text-align: right; }
+        @media (min-width: 792px) and (max-width: 1320px) {
+          .section .section-table .table-row .table-title {
+            font-size: 48px; } }
       .section .section-table .table-row .table-info {
         float: left;
         margin: 12px;
@@ -135,6 +141,9 @@ body {
         .section .section-table .table-row .table-info ul {
           margin: 0;
           font-size: 18px; }
+          @media (min-width: 792px) and (max-width: 1320px) {
+            .section .section-table .table-row .table-info ul {
+              font-size: 32px; } }
   .section .team-section {
     width: 70%;
     margin: 12px auto;
@@ -175,6 +184,9 @@ body {
   .section .port-section {
     width: 50%;
     margin: auto; }
+    @media (min-width: 792px) and (max-width: 1320px) {
+      .section .port-section {
+        width: 75%; } }
     .section .port-section .port-nav {
       float: left;
       width: 40%; }
@@ -194,7 +206,8 @@ body {
         @media (min-width: 792px) and (max-width: 1320px) {
           .section .port-section .port-nav a {
             width: 45%;
-            width: calc(50% - 28px); }
+            width: calc(50% - 28px);
+            font-size: 48px; }
             .section .port-section .port-nav a:hover {
               border-left: 4px solid #39484c !important;
               color: #fefbdd !important; } }

@@ -129,6 +129,9 @@ body{
     text-align:center;
     margin:auto;
     margin-top:24px;
+    @include tablet{
+        font-size: 72px;
+    }
   }
   .client-section{
     width: 50%;
@@ -160,6 +163,9 @@ body{
         font-size: 32px;
         float: left;
         text-align:right;
+        @include tablet{
+          font-size: 48px;
+        }
       }
       .table-info{
         float: left;
@@ -170,6 +176,9 @@ body{
         ul{
           margin: 0;
           font-size: 18px;
+          @include tablet{
+            font-size: 32px;
+          }
         }
       }
     }
@@ -220,6 +229,9 @@ body{
   .port-section{
     width: 50%;
     margin: auto;
+    @include tablet{
+      width: 75%;
+    }
     .port-nav{
       float: left;
       width: 40%;
@@ -239,6 +251,7 @@ body{
         @include tablet{
           width: 45%;
           width: calc(50% - 28px);
+          font-size: 48px;
           &:hover{
             border-left: 4px solid $gray !important;
             color: $white !important;
