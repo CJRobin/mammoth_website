@@ -8,7 +8,9 @@ body {
   background-color: #39484c;
   width: 100%;
   height: 50px;
-  position: fixed; }
+  position: fixed;
+  z-index: 200;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
   @media (min-width: 792px) and (max-width: 1320px) {
     .header {
       height: 100px; } }
@@ -33,7 +35,7 @@ body {
         float: none; } }
     .header .link-section a {
       color: #fefbdd;
-      margin: 12px;
+      margin: 18px;
       font-size: 18px;
       text-decoration: none;
       cursor: pointer;
@@ -158,6 +160,7 @@ body {
       text-align: center;
       clear: both;
       background-color: #edc195;
+      border: 4px solid #edc195;
       width: 60%;
       margin: auto; }
     .section .team-section .member-desc {
@@ -170,27 +173,60 @@ body {
     .section .port-section .port-nav {
       float: left;
       width: 40%; }
+      @media (min-width: 792px) and (max-width: 1320px) {
+        .section .port-section .port-nav {
+          width: 100%; } }
       .section .port-section .port-nav a {
         text-decoration: none;
-        color: #232c33;
+        color: #39484c;
         float: left;
         width: calc(100% - 40px);
         padding: 12px;
-        border-left: 4px solid #232c33;
+        border-left: 4px solid #39484c;
         font-size: 21px;
         transition: 0.25s;
         cursor: pointer; }
+        @media (min-width: 792px) and (max-width: 1320px) {
+          .section .port-section .port-nav a {
+            width: 45%;
+            width: calc(50% - 28px); }
+            .section .port-section .port-nav a:hover {
+              border-left: 4px solid #39484c !important;
+              color: #fefbdd !important; } }
         .section .port-section .port-nav a:hover {
-          border-left: 18px solid #232c33; }
+          border-left: 18px solid #39484c;
+          color: #232c33; }
         .section .port-section .port-nav a.selected {
           color: #fefbdd;
-          background-color: #232c33; }
+          background-color: #39484c; }
     .section .port-section .port-display {
       width: 60%;
-      height: 500px;
+      height: 700px;
       background-color: #232c33;
       float: right;
-      overflow: hidden; }
+      overflow: hidden;
+      background-size: cover;
+      background-position: top center; }
+      @media (min-width: 792px) and (max-width: 1320px) {
+        .section .port-section .port-display {
+          width: 100%; } }
+      .section .port-section .port-display:hover .port-cover {
+        opacity: 1;
+        background-color: rgba(35, 44, 51, 0.75); }
+    .section .port-section .port-cover {
+      transition: 0.5s;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-color: rgba(35, 44, 51, 0); }
+      .section .port-section .port-cover .port-desc {
+        color: #fefbdd;
+        padding: 18px; }
+      .section .port-section .port-cover .port-link {
+        text-align: center; }
+        .section .port-section .port-cover .port-link a {
+          color: #edc195;
+          font-size: 18px; }
   .section .contact-section {
     width: 50%;
     margin: auto; }

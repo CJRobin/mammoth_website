@@ -7,11 +7,23 @@ $(function() {
     });
     $(this).addClass("selected");
     if($(this).attr('id') == 'heliweb'){
-      $(".port-display source").attr("src", "images/clients/heliweb/source.mp4");
+      $(".port-display").css("background-image", "url(images/clients/heliweb/port.png)");
+      $(".port-display a").attr("href", "http://www.heliweb.com/");
+
+
     }else if($(this).attr('id') === 'roblox'){
-      $(".port-display source").attr("src", "images/clients/roblox/source.mp4");
+      $(".port-display").css("background-image", "url(images/clients/roblox/coco.png)");
+      $(".port-display a").attr("href", "https://www.roblox.com/");
+
+    }else if($(this).attr('id') === 'johnwarren'){
+      $(".port-display").css("background-image", "url(images/clients/johnwarren/port.png)");
+      $(".port-display a").attr("href", "http://john-warren.vision/");
+
+    }else if($(this).attr('id') === 'goodfires'){
+      $(".port-display").css("background-image", "url(images/clients/goodfires/port.jpg)");
+      $(".port-display a").attr("href", "https://www.facebook.com/goodfires/");
+
     }
-    $(".port-display video")[0].load();
   })
 
 $("#whatdo-link").click(function(){
@@ -39,6 +51,9 @@ $("#contact-link").click(function(){
       scrollTop: $("#contact").offset().top-50
   }, 800);
 });
+
+window.sr = ScrollReveal();
+sr.reveal('.table-row');
 
 $("#send_message").click(function(){
   $.post( "mail.php", { name: $("#name_id").val(), email: $("#email_id").val(), message: $("#message_id").val() })
