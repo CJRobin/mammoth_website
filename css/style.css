@@ -63,6 +63,7 @@ body {
 .cover {
   background-size: cover;
   width: 100%;
+  height: 100vh;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+50,1+100 */
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 50%, white 100%);
   /* FF3.6-15 */
@@ -153,7 +154,7 @@ body {
     .section .team-section .team-member {
       float: left;
       margin: 12px;
-      width: calc(25% - 24px); }
+      width: calc(33% - 24px); }
       @media (min-width: 792px) and (max-width: 1320px) {
         .section .team-section .team-member {
           width: calc(50% - 24px); } }
@@ -180,7 +181,8 @@ body {
     .section .team-section .member-desc {
       margin: 6px;
       font-family: "Work Sans", sans-serif;
-      font-size: 14px; }
+      font-size: 14px;
+      text-align: center; }
   .section .port-section {
     width: 50%;
     margin: auto; }
@@ -239,7 +241,8 @@ body {
       background-color: rgba(35, 44, 51, 0); }
       .section .port-section .port-cover .port-desc {
         color: #fefbdd;
-        padding: 18px; }
+        padding: 18px;
+        font-family: "Work Sans", sans-serif; }
       .section .port-section .port-cover .port-link {
         text-align: center; }
         .section .port-section .port-cover .port-link a {
@@ -324,3 +327,67 @@ body {
   .section#contact {
     background-image: url("../images/geo.png");
     background-attachment: fixed; }
+
+.footer {
+  background-color: #39484c;
+  width: 100%;
+  clear: both; }
+  .footer .info {
+    width: 50%;
+    padding: 24px;
+    margin-left: 100px;
+    float: left; }
+    .footer .info .info-title {
+      color: #fefbdd;
+      font-size: 32px; }
+    .footer .info .info-desc {
+      color: #fefbdd;
+      font-family: "Work Sans", sans-serif; }
+  .footer .bottom {
+    background-color: #232c33;
+    color: white;
+    clear: both; }
+    .footer .bottom p {
+      margin-left: 100px;
+      padding: 6px;
+      -webkit-margin-after: 0; }
+  .footer .social {
+    float: left; }
+    .footer .social .social-title {
+      font-size: 32px;
+      padding: 6px;
+      color: #fefbdd; }
+    .footer .social .social-icon {
+      width: 25px;
+      height: 25px;
+      background-size: contain;
+      margin: 6px;
+      display: inline-block; }
+      .footer .social .social-icon.linkedin {
+        background-image: url("../images/social_icons/linkedin.svg"); }
+      .footer .social .social-icon.facebook {
+        background-image: url("../images/social_icons/facebook.svg"); }
+
+.bio-info {
+  width: 50%;
+  margin: auto;
+  font-family: "Work Sans", sans-serif;
+  padding: 12px; }
+
+.loader {
+  background-image: url("../images/loader.svg");
+  width: 50vw;
+  height: 50vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto; }
+
+.final-message {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: #232c33;
+  font-family: "Work Sans", sans-serif; }
